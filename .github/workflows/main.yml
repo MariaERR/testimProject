@@ -1,5 +1,5 @@
 name: Testim E2E
-on: [pull_request]
+on: [push]
 
 jobs:
     run-testimio-cli:
