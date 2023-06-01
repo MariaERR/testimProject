@@ -10,6 +10,5 @@ jobs:
               with:
                 node-version: '16.13.0'
             - run: echo "🎉 installing testim package and linking testim project to github action "
-            - run : testim --label "githubactions"
             - run: npm install -g @testim/testim-cli
             - run : testim --token "Y0jy30lxHFKryRD7ahLKcxRSBVTWOU6WOPfdpNW9Ud5NpYkGoG" --project "f0EhXJOmKz1KgSVNrsdK" --grid "Testim-Grid"
