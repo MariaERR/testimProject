@@ -1,5 +1,5 @@
 name: Testim E2E
-on: [push]
+on: [pull_request]
 
 jobs:
     run-testimio-cli:
@@ -11,4 +11,4 @@ jobs:
                 node-version: '16.13.0'
             - run: echo "🎉 installing testim package and linking testim project to github action "
             - run: npm install -g @testim/testim-cli
-            - run : testim --token "Y0jy30lxHFKryRD7ahLKcxRSBVTWOU6WOPfdpNW9Ud5NpYkGoG" --project "f0EhXJOmKz1KgSVNrsdK" --grid "Testim-Grid"
+            - run : testim --token "Y0jy30lxHFKryRD7ahLKcxRSBVTWOU6WOPfdpNW9Ud5NpYkGoG" --project "f0EhXJOmKz1KgSVNrsdK" --grid "Testim-Grid" --name "Create_Employee"
