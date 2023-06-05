@@ -1,5 +1,10 @@
 name: Testim E2E
-on: [push]
+
+on:
+  push:
+    branches:
+      - dev_branch_testim11
+
 jobs:
   run-testimio-cli:
     runs-on: windows-latest
