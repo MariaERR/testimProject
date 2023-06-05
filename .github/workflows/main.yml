@@ -1,14 +1,16 @@
 name: Testim E2E
-on: [pull_request]
-
+on:
+  pull_request:
+    branches:
+      - dev_branche_testim11
 jobs:
-    run-testimio-cli:
-        runs-on: windows-latest
-        steps:
-            - uses: actions/checkout@v2
-            - uses: actions/setup-node@v2
-              with:
-                node-version: '16.13.0'
-            - run: echo "🎉 installing testim package and linking testim project to github action "
-            - run: npm install -g @testim/testim-cli
-            - run : testim --token "Y0jy30lxHFKryRD7ahLKcxRSBVTWOU6WOPfdpNW9Ud5NpYkGoG" --project "f0EhXJOmKz1KgSVNrsdK" --grid "Testim-Grid" --name "Create_Employee"
+  run-testimio-cli:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16.13.0'
+      - run: echo "🎉 installing testim package and linking testim project to github action "
+      - run: npm install -g @testim/testim-cli
+      - run: testim --token "Y0jy30lxHFKryRD7ahLKcxRSBVTWOU6WOPfdpNW9Ud5NpYkGoG" --project "f0EhXJOmKz1KgSVNrsdK" --grid "Testim-Grid" --name "Create_Employee"
