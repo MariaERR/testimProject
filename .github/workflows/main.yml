@@ -3,7 +3,7 @@ name: Testim E2E
 on:
   push:
     branches:
-      - dev_branch_testim11
+      - main
 
 jobs:
   run-testimio-cli:
